@@ -15,7 +15,7 @@ export default defineConfig({
   plugins: [tsconfigPaths(), react(), tagger()],
   resolve: {
     alias: {
-      '~': path.resolve(__dirname, './src'),
+      '~': path.resolve(__dirname, './frontend/src'),
     },
   },
   server: {
@@ -25,7 +25,7 @@ export default defineConfig({
     allowedHosts: [".amazonaws.com", ".builtwithrocket.new"],
     proxy: {
       '/api': {
-        target: 'http://localhost:5000',
+        target: 'https://we-121225-x010-b.vercel.app/',
         changeOrigin: true,
       },
     },
